@@ -1,0 +1,20 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:wght@700&family=Inter&family=Secular+One&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:wght@700&family=Inter&family=Righteous&family=Secular+One&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("gradient.jpg");
+  background-color: #cccccc;
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+}
