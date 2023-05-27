@@ -5,18 +5,18 @@ import { ExpenseContext } from '../contexts/ExpenseProvider';
 import { AiOutlineClose } from 'react-icons/ai';
 import { TbLassoPolygon } from 'react-icons/tb';
 
-function AddTransactionModal({isUpdateTransaction, expenseDataforUpdate}) {
-    const { ShowAddTransactionModal, setShowAddTransactionModal} = useContext(ExpenseContext);
+function AddTransactionModal({isUpdateTransaction}) {
+    const { ShowAddTransactionModal, setShowAddTransactionModal, dataToBeUpdated, setDataToBeUpdated, postExpense} = useContext(ExpenseContext);
     
-    const [name, setName] = useState(expenseDataforUpdate?.name);
-    const [amount, setAmount] = useState('');
-    const [type, setType] = useState('');
-    const [category, setCategory] = useState('');
-    const [description, setDescription] = useState('');
+    const [name, setName] = useState(dataToBeUpdated?.name);
+    const [amount, setAmount] = useState(dataToBeUpdated?.amount);
+    const [type, setType] = useState(dataToBeUpdated?.type);
+    const [category, setCategory] = useState(dataToBeUpdated?.category);
+    const [description, setDescription] = useState(dataToBeUpdated?.description);
 
     console.log("isUpdateTransaction :",isUpdateTransaction);
-    console.log("expenseDataforUpdate :",expenseDataforUpdate);
-
+    console.log("dataToBeUpdated :",dataToBeUpdated);
+    
     const { expenses, setExpenses, fetchExpenses } = useContext(ExpenseContext);
     const updateName = (e) => {
         console.log(e.target.value);
@@ -68,21 +68,23 @@ function AddTransactionModal({isUpdateTransaction, expenseDataforUpdate}) {
             category,
             description
         }
-        console.log("DATA FOR POST-", transactionData);
-        const headers = {
-            "Content-Type": "application/jsons"
-        }
-        const response = await axios.post(SERVER_URL, transactionData, headers)
-        console.log("Response from post : ", response.data);
-        setShowAddTransactionModal(false);
-        fetchExpenses();
+
+        postExpense(transactionData);
+        // console.log("DATA FOR POST-", transactionData);
+        // const headers = {
+        //     "Content-Type": "application/jsons"
+        // }
+        // const response = await axios.post(SERVER_URL, transactionData, headers)
+        // console.log("Response from post : ", response.data);
+        // setShowAddTransactionModal(false);
+        // fetchExpenses();
 
     }
     return (
         <div className='add-transaction-modal' >
             <form className='modal-form' onSubmit={handleAddTransaction} action="">
                 <span className='close-icon'>
-                    <AiOutlineClose   onClick={() => { setShowAddTransactionModal(false); }} />
+                    <AiOutlineClose   onClick={() => { setShowAddTransactionModal(false);  setDataToBeUpdated(null);}} />
                 </span>
                 <div className="form-element">
                     <label htmlFor="">Name</label>
@@ -90,13 +92,13 @@ function AddTransactionModal({isUpdateTransaction, expenseDataforUpdate}) {
                 </div>
                 <div className="form-element">
                     <label htmlFor="">Amount</label>
-                    <input onChange={updateAmount} type="text" name="" id="" />
+                    <input onChange={updateAmount} value={amount} type="text" name="" id="" />
                 </div>
                 {/* <label htmlFor="">Type</label> */}
 
                 <div className="form-element">
                     <label htmlFor="">Category</label>
-                    <select className='category-drp-dwn' onChange={updateCategory} name="category" id="category">
+                    <select value={category} className='category-drp-dwn' onChange={updateCategory} name="category" id="category">
                         {categories.map((category) => {
                             return <option value={`${category.name}`}>{category.name}</option>
                         })}
@@ -104,10 +106,10 @@ function AddTransactionModal({isUpdateTransaction, expenseDataforUpdate}) {
                 </div>
                 <div className="form-element">
                     <label htmlFor="">Description</label>
-                    <textarea onChange={updateDescription} name="" id="" cols="20" rows="5"></textarea>
+                    <textarea  value={description} onChange={updateDescription} name="" id="" cols="20" rows="5"></textarea>
                 </div>
                 <div className="form-element radio-btn-grp">
-                    <input className='radio-btn' onChange={updateType} type="radio" value="Credit" name='Type' />
+                    <input className='radio-btn'  onChange={updateType} type="radio" value="Credit" name='Type' />
                     <label >Credit</label>
                     <input className='radio-btn' onChange={updateType} type="radio" value="Debit" name='Type' />
                     <label >Debit</label>

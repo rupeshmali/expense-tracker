@@ -12,8 +12,8 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  background-image: url("gradient.jpg");
-  background-color: #cccccc;
+  /* background-image: url("gradient.jpg"); */
+  background-color: white;
   /* background-position: center; */
   /* background-repeat: no-repeat; */
   background-size: cover;

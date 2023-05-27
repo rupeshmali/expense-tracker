@@ -5,7 +5,9 @@ function Navbar({ updateModalStatus }) {
         <div className='navbar-div'>
             <div className="project-name">
                 <h1>
-                    Expense Tracker
+                    <span className='color-red project-title padding'>Expense</span>
+                    <span className='color-green project-title'>Tracker</span>
+                    {/* <span className='color-blue project-title'></span> */}
                 </h1>
             </div>
             <div className="add-trans-btn-div">

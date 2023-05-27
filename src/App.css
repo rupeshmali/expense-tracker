@@ -1,35 +1,47 @@
+
+
 .navbar-div {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  border: 5px solid white;
+  /* padding: 20px; */
+  /* border: 5px solid white; */
+  /* background-color: #059862 ; */
+  background-color: white;
+  min-width: 100%;
   
   /* flex-wrap: nowrap; */
   /* height:100%;
   width:100%; */
   /* overflow:hidden; */
 }
-
-h1 {
-  color: white;
+.padding {
+  padding-left: 20px;
+}
+.project-title {
   font-size: 40px;
   font-family: 'Righteous', cursive;
+ 
 }
 
-/* .home-container{
+.home-container{
+ 
   display: flex;
-  flex-wrap: nowrap;
-  height:100%;
-  width:100%;
-  overflow:hidden;
-} */
+ flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  padding-bottom: 100PX;
+}
 /* .navbar {
   display: flex;
   justify-content: flex-start;
 } */
 
 .add-transaction-modal {
+  /* position : absolute; */
+  z-index: 1;
   position: fixed;
   top: 0;
   left: 0;
@@ -88,14 +100,19 @@ h1 {
   font-size: larger;
 }
 
+.add-trans-btn-div{
+  padding-right: 40px;
+}
+
 .add-transaction-btn {
-  margin-left: 220px;
-  background-color: white;
-  color: black;
+  /* margin-left: 220px; */
+  border: none;
+  background-color: blue;
+  color: white;
   font-weight: bold;
   font-size: larger;
   padding: 20px 40px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .category-drp-dwn {
@@ -152,15 +169,17 @@ input {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 20px;
-  border-right: 5px solid white;
+  /* padding: 40px; */
+  /* padding-top: 0px; */
+  /* border-right: 5px solid white; */
   max-width: 400px;
+  /* background-color: black; */
 }
 
 .transaction-name {
-  font-size: large;
-  color: black;
-  font-weight: bold;
+  font-size: 16px;
+  color: #171717;
+  /* font-weight: ; */
 }
 
 .transaction-amount {
@@ -169,7 +188,7 @@ input {
   padding-bottom: 15px;
   min-height: 30px;
   max-height: 30px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 
@@ -177,15 +196,22 @@ input {
 .single-transaction {
   display: flex;
   flex-direction: column;
-
+ 
   min-width: 306px;
   padding: 0px 20px;
   background-color: white;
-  border-radius: 10px;
-  font-weight: bold;
+  
+  border-bottom: 1px solid #e0e0e0;
+  /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+  /* font-weight: bold; */
   /* min-height: 100px; */
 }
-
+.single-transaction:nth-child(odd) {
+  /* background-color: whitesmoke; */
+}
+/* .single-transaction:nth-child(even) {
+  color: blue;
+} */
 .color-red {
   color: red;
 }
@@ -194,8 +220,21 @@ input {
   color: rgb(18, 219, 0);
 }
 
+.color-blue {
+  color: blue;
+}
+
 .edit-icon {
   color: black;
+}
+
+.delete-icon{
+  color: black;
+}
+
+.icons-wrapper{
+  display: flex;
+  gap: 5px;
 }
 
 .name-icon-wrapper {
@@ -208,32 +247,36 @@ input {
   align-items: center;
 }
 
-.recent-trans-heading {
-  /* background-color: purple; */
-  color: white;
-  border-radius: 10px;
-  text-align: center;
-}
 
 .transactionlist-and-dashboard-container {
   display: flex;
   gap: 50px;
-   border-bottom: 5px solid white;
-   border-right: 5px solid white;
-   border-left: 5px solid white;
   /* justify-content: space-between; */
   /* gap:5px; */
+}
+.dashboard-tiles-wrapper{
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 400px;
+  max-height: 400px;
+  /* padding: 20px; */
+  justify-content: center;
+  align-items: center;
 }
 
 .dashboard-elements-wrapper {
   display: flex;
-  max-width: 420px;
-  min-width: 420px;
+  max-width: 410px;
+  min-width: 410px;
+  justify-content: space-between;
   /* flex-direction: column; */
-  gap: 10px;
+  /* gap: 10px; */
   /* background-color: white; */
-  padding: 20px;
-  flex-wrap: wrap;
+  /* adding: 20px; */
+  padding-top: 10px;
+  /* flex-wrap: wrap; */
 }
 
 .dashboard-element {
@@ -244,6 +287,7 @@ input {
   max-width: 200px;
   min-height: 195.6px;
   max-height: 195.6px;
+  font-weight: bold;
   /* padding: 20px 20px; */
   /* min-height: 100PX; */
   /* background-image: url("gradient.jpg");
@@ -254,6 +298,9 @@ input {
   background-color: white;
   /* border: 1px solid black; */
   border-radius: 10px;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
   font-size: large;
   color: black;
   justify-content: center;
@@ -261,11 +308,81 @@ input {
   align-items: center;
 }
 
+.total-balance-div {
+  min-width: 410px;
+  max-width: 410px;
+}
+
 .dashboard-container {
+  gap: 50px;
+  padding: 30px;
   display: flex;
- 
+  justify-content: center;
+  /* min-width: 950px;
+  max-width: 950px; */
+  min-height: 400px;
+  max-height: 400px;
 }
 
 .pie-chart {
   /* padding: 20px; */
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 400px;
+  max-height: 400px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 10px;
+}
+
+.transactions-container{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* border: 0.5px SOLID black; */
+  /* border-radius: 10px; */
+  /* border: 1px solid #ddd; */
+  gap: 40px;
+  min-width: 400px;
+  background-color: white;
+  padding: 20px;
+}
+
+.transactions-heading{
+  /* text-align: center;  */
+  /* box-shadow: 0px 15px 10px -12px #b8b3b3;    */
+  padding: 20px 0px ;
+  font-weight: bold;
+  font-size: 22px;
+  /* padding-left: 45px; */
+  padding-top: 20px;
+  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0 4px 3px -4px rgba(0,0,0,.2);
+  
+}
+
+.dashboard-container-main{
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid #ddd; */
+  /* border-radius: 10px; */
+  background-color: white;
+  padding: 20px;
+}
+
+.dashboard-heading{
+/* text-align: center; */
+/* padding-left: 40px; */
+padding: 20px 0px;
+font-size: 22px;
+font-weight: bold;
+border-bottom: 1px solid #eaeaea;
+box-shadow: 0 4px 3px -4px rgba(0,0,0,.2);
+/* text-align: center; */
+/* background-color: whitesmoke; */
+
 }

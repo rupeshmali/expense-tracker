@@ -1,188 +1,24 @@
 {
   "transactions": [
     {
-      "name": "asda",
-      "amount": "324234",
-      "type": "Debit",
-      "category": "Health & Fitness",
-      "description": "jjjjjjkkkkkkkk",
-      "id": 2
-    },
-    {
-      "name": "qwerty",
-      "amount": "1231",
-      "type": "Credit",
-      "category": "",
-      "description": "salary april",
-      "id": 3
-    },
-    {
-      "name": "LIC",
-      "amount": "4500",
-      "type": "Debit",
-      "category": "Other",
-      "description": "LIC PREMIUM for year 2022",
-      "id": 4
-    },
-    {
-      "name": "Books",
-      "amount": "599",
-      "type": "Debit",
-      "category": "Education",
-      "description": "Apti books",
-      "id": 5
-    },
-    {
-      "name": "LIC",
-      "amount": "4500",
-      "type": "Debit",
-      "category": "Other",
-      "description": "LIC PREMIUM for year 2022",
-      "id": 6
-    },
-    {
-      "name": "Books",
-      "amount": "599",
-      "type": "Debit",
-      "category": "Education",
-      "description": "Apti books",
-      "id": 7
-    },
-    {
-      "name": "LIC",
-      "amount": "4500",
-      "type": "Debit",
-      "category": "Other",
-      "description": "LIC PREMIUM for year 2022",
-      "id": 8
-    },
-    {
-      "name": "Books",
-      "amount": "599",
-      "type": "Debit",
-      "category": "Education",
-      "description": "Apti books",
-      "id": 9
-    },
-    {
-      "name": "LIC",
-      "amount": "4500",
-      "type": "Debit",
-      "category": "Other",
-      "description": "LIC PREMIUM for year 2022",
-      "id": 10
-    },
-    {
-      "name": "Books",
-      "amount": "599",
-      "type": "Debit",
-      "category": "Education",
-      "description": "Apti books",
-      "id": 11
-    },
-    {
-      "name": "LIC",
-      "amount": "4500",
-      "type": "Debit",
-      "category": "Other",
-      "description": "LIC PREMIUM for year 2022",
-      "id": 12
-    },
-    {
-      "name": "Books",
-      "amount": "599",
-      "type": "Debit",
-      "category": "Education",
-      "description": "Apti books",
-      "id": 13
-    },
-    {
-      "name": "Bananas",
-      "amount": "40",
+      "name": "Hall POP and Colouring",
+      "amount": "40000",
       "type": "Debit",
       "category": "Food & Dining",
-      "description": "",
-      "id": 14
+      "id": 46
     },
     {
-      "name": "Hemlo moto",
-      "amount": "4000",
-      "type": "Debit",
-      "category": "Utilities",
-      "description": "Moto cha mobile ghetla",
-      "id": 20
-    },
-    {
-      "name": "Puma Shoes",
-      "amount": "2449",
-      "type": "Debit",
-      "category": "Health & Fitness",
-      "description": "Puma shoes ghetle from stock market profit",
-      "id": 21
-    },
-    {
-      "name": "Salary May",
-      "amount": "44000",
-      "type": "Credit",
-      "category": "",
-      "description": "Yardi",
-      "id": 23
-    },
-    {
-      "name": "Intraday Profit",
-      "amount": "1750",
-      "type": "Credit",
-      "category": "Investments",
-      "description": "MGL, GUJGAS, SIEMENS, SAGAR CEMENTS",
-      "id": 24
-    },
-    {
-      "name": "Aniruddha Gandhare Lunch",
-      "amount": "300",
+      "name": "Papa LIC premium payment",
+      "amount": "9500",
       "type": "Debit",
       "category": "Food & Dining",
-      "description": "Ovenstory pizza store",
-      "id": 25
+      "id": 47
     },
     {
-      "name": "Fathers operation",
-      "amount": "10000",
-      "type": "Debit",
-      "category": "Health & Fitness",
-      "description": "Thumb bone operation at khadke hospital",
-      "id": 26
-    },
-    {
-      "name": "Hair cut",
-      "amount": "150",
-      "type": "Debit",
-      "category": "Other",
-      "description": "Sai hair saloon",
-      "id": 28
-    },
-    {
-      "name": "MEDICAL",
-      "amount": "70",
-      "type": "Debit",
-      "category": "Health & Fitness",
-      "description": "tABLETS",
-      "id": 29
-    },
-    {
-      "name": "Jalebi emarti",
-      "amount": "50",
-      "type": "Debit",
-      "category": "Food & Dining",
-      "description": "Paldhi sugoki",
-      "id": 30
-    },
-    {
-      "name": "Movie",
-      "amount": "4000",
-      "type": "Debit",
-      "category": "Entertainment",
-      "description": "Kerala story",
-      "id": 31
+      "name": "temp",
+      "amount": "50000",
+      "type": "Credit",
+      "id": 48
     }
   ]
 }

@@ -7,6 +7,24 @@ export const ExpenseContext = createContext();
 const ExpenseProvider = ({children})=>{
     const [expenses,setExpenses] = useState([]);
     const [ShowAddTransactionModal, setShowAddTransactionModal] = useState(false);
+    const [dataToBeUpdated, setDataToBeUpdated] = useState(null);
+
+    const postExpense = async (transactionData)=>{
+        console.log("DATA FOR POST-", transactionData);
+        const headers = {
+            "Content-Type": "application/jsons"
+        }
+        const response = await axios.post(SERVER_URL, transactionData, headers)
+        console.log("Response from post : ", response.data);
+        setShowAddTransactionModal(false);
+        fetchExpenses();
+
+    }
+
+    const deleteExpense = async (expenseId) =>{
+        const response  = await axios.delete(SERVER_URL + '/' + expenseId);
+        fetchExpenses();
+    }
 
     const fetchExpenses = async ()=>{
         const response = await axios.get(SERVER_URL);
@@ -22,8 +40,12 @@ const ExpenseProvider = ({children})=>{
         expenses,
         setExpenses,
         fetchExpenses,
+        postExpense,
+        deleteExpense,
         ShowAddTransactionModal,
-        setShowAddTransactionModal
+        setShowAddTransactionModal,
+        dataToBeUpdated,
+        setDataToBeUpdated
 
     }
 
